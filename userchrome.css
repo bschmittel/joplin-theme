@@ -82,11 +82,10 @@ body {
 }
 
 /* If this is enabled, it prevents cursor from being present in .201 - Blair */
-/*
+/* In .209, it appears to work fine */
 #react-root>div>div>div:last-child>div>div>div>div:last-child>div:last-child {
     border: none !important;
 }
-*/
 
 /* markdown */
 .ace_text-layer {
