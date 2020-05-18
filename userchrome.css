@@ -1,5 +1,7 @@
 /* For styling the Joplin app (except the HTML-ized markdown, which is defined in `userstyle.css`) */
 /* designed by uxamanda (https://discourse.joplinapp.org/u/uxamanda). latest version https://github.com/amandamcg/joplin-theme */
+/* Modified by bschmittel to update styles for more appealing dark mode */
+
 :root {
     --white: #e3e3e3; /* Markdown Editor headers */
     --dark-white: #EEF0EA;
@@ -218,6 +220,11 @@ body {
     font-family: var(--font-mono);
     font-weight: var(--font-weight-light);
     background-color: var(--darker-grey) !important
+}
+
+/* Date stamp on right - Blair Added */
+#react-root div div div:last-child div div:first-child span:first-of-type {
+    font-size: 1em !important;
 }
 
 .editor-toolbar {
