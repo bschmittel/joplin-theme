@@ -1,31 +1,52 @@
 /* For styling the Joplin app (except the HTML-ized markdown, which is defined in `userstyle.css`) */
 /* designed by uxamanda (https://discourse.joplinapp.org/u/uxamanda). latest version https://github.com/amandamcg/joplin-theme */
 :root {
-    --white: #e3e3e3;
+    --white: #e3e3e3; /* Markdown Editor headers */
     --dark-white: #EEF0EA;
-    --light-grey: #A3A79F;
-    --grey: #575856;
-    --dark-grey: #272728;
-    --darker-grey: #1D2024;
-    --black: #131517;
-    --primary: #0097DB;
+    --light-grey: #A3A79F; /* Markdown Editor Text */
+    --grey: #575856; /* Icons */
+    --dark-grey: #272728; 
+    --darker-grey: #1D2024; /* Note Title Bar */
+    --black: #131517; /* Editor Background */
+    --primary: #0097DB; 
     --secondary: #005378;
     --base-size-1: 1px;
     --base-size-4: 4px;
     --base-size-8: 8px;
     --base-size-13: 13px;
-    --base-size-18: 18px;
+    --base-size-18: 18px; /* Note Title Size */
     --base-size-24: 24px;
     --base-size-32: 32px;
     --base-size-40: 40px;
     --base-size-272: 272px;
     --font-sans: "IBM Plex Sans";
+
+/*
     --font-mono: "IBM Plex Mono";
+*/
+    --font-mono: "Menlo";
+
     --font-weight-light: 200;
     --font-weight-base: 300;
     --font-weight-bold: 500;
     --font-line-height: 1.1em;
 }
+
+/*------ Notebook pane: use lines for notebook tree -------------------------*/
+/*
+.folders i.fa.fa-minus-square, .folders i.fa.fa-plus-square {
+	padding-right: 3px !important;
+}
+.folders .list-item-container {
+	margin: 0 !important;
+}
+.folders a.list-item {
+	border-left: 1px solid #575856 !important;
+	padding-left: 9px;
+	margin: 0 !important;
+}
+*/
+/*---------------------------------------------------------------------------*/
 
 body {
     background-color: var(--darker-grey) !important;
@@ -58,9 +79,12 @@ body {
     /* makes the last set of options in the toolbar aligned-right */
 }
 
+/* If this is enabled, it prevents cursor from being present in .201 - Blair */
+/*
 #react-root>div>div>div:last-child>div>div>div>div:last-child>div:last-child {
     border: none !important;
 }
+*/
 
 /* markdown */
 .ace_text-layer {
@@ -94,14 +118,17 @@ body {
 }
 
 .ace_cursor {
-    border-left: var(--base-size-1) solid var(--primary) !important;
+    border-left: var(--base-size-1) solid var(--primary) !important; 
 }
+
 
 /* prevent cursor from blinking */
 /* https://discourse.joplinapp.org/t/share-your-css/1730/17 */
+/*
 .ace_cursor-layer:not(.ace_hidden-cursors) .ace_cursor {
     opacity: 1 !important;
 }
+*/
 
 /* gui */
 .side-bar {
@@ -122,6 +149,16 @@ body {
     font-size: var(--base-size-13) !important;
 }
 
+/* Blair Added - Sidebar hover */
+/* .side-bar div[toggleblock="1"]:hover, */
+.side-bar .list-item-container:hover,
+.side-bar .synchronize-button:hover
+{
+   background-color: #1C2A38  !important;
+}
+
+
+
 .list-item div {
     margin-left: auto !important;
     padding-right: var(--base-size-13) !important;
@@ -130,11 +167,13 @@ body {
 
 .synchronize-button {}
 
+
 .note-list {
     background-color: var(--darker-grey);
     padding: var(--base-size-8) 0;
     opacity: 0.7;
 }
+
 
 .note-list input[type="checkbox"i] {
     opacity: 0.5 !important;
@@ -152,6 +191,13 @@ body {
     /* font-family: "IBM Plex Mono" !important; */
     /* font-size: 12px !important; */
     color: var(--light-grey) !important;
+}
+
+/* Adjust Note List Font Size - Blair Added */
+.note-list > div,
+.note-list > div > a 
+ {
+    font-size: 0.9em !important;
 }
 
 /* icons */
@@ -270,17 +316,28 @@ input:focus {
     display: none !important;
 }
 
+/* Folder Section */
 .folders i.fa.fa-minus-square, .folders i.fa.fa-plus-square {
     padding-right: 3px !important;
 }
 
 .folders .list-item-container {
     margin: 0 !important;
+    background-color: #1D2025 !important; /* Blair Added. */
 }
+
+/* Blair added 
+    This is for notebook folder hover background
+*/
+.folders a.list-item:hover {
+    background-color: #1C2A38  !important; /* Blair Added. */
+}
+
 
 .folders a.list-item {
     padding-left: 9px;
     margin: 0 !important;
+    background-color: #1D2025 !important; /* Blair Added */
 }
 
 .side-bar>div:last-child div {
@@ -294,6 +351,7 @@ input:focus {
     font-family: var(--font-mono) !important;
     border-top: var(--base-size-1) solid var(--black);
 }
+
 
 .synchronize-button {
     border: none !important;
