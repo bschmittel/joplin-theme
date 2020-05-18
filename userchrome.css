@@ -1,0 +1,308 @@
+/* For styling the Joplin app (except the HTML-ized markdown, which is defined in `userstyle.css`) */
+/* designed by uxamanda (https://discourse.joplinapp.org/u/uxamanda). latest version https://github.com/amandamcg/joplin-theme */
+:root {
+    --white: #e3e3e3;
+    --dark-white: #EEF0EA;
+    --light-grey: #A3A79F;
+    --grey: #575856;
+    --dark-grey: #272728;
+    --darker-grey: #1D2024;
+    --black: #131517;
+    --primary: #0097DB;
+    --secondary: #005378;
+    --base-size-1: 1px;
+    --base-size-4: 4px;
+    --base-size-8: 8px;
+    --base-size-13: 13px;
+    --base-size-18: 18px;
+    --base-size-24: 24px;
+    --base-size-32: 32px;
+    --base-size-40: 40px;
+    --base-size-272: 272px;
+    --font-sans: "IBM Plex Sans";
+    --font-mono: "IBM Plex Mono";
+    --font-weight-light: 200;
+    --font-weight-base: 300;
+    --font-weight-bold: 500;
+    --font-line-height: 1.1em;
+}
+
+body {
+    background-color: var(--darker-grey) !important;
+}
+
+.noteTextViewer {
+    border-left: var(--base-size-1) solid var(--dark-grey) !important;
+}
+
+#react-root>div>div>div:last-child {
+    border-left: none !important;
+    background-color: var(--black)
+}
+
+#react-root>div>div>div:last-child>div>div {
+    border-bottom: var(--base-size-1) solid var(--dark-grey) !important;
+}
+
+#react-root>div>div>div:last-child>div>div>div .editor-toolbar {
+    border-bottom: var(--base-size-1) solid var(--dark-grey) !important;
+    margin-bottom: 0 !important;
+}
+
+#react-root>div>div>div:last-child>div>div .editor-toolbar {
+    border-bottom: none !important;
+}
+
+.editor-toolbar span:last-of-type {
+    width: 100% !important;
+    /* makes the last set of options in the toolbar aligned-right */
+}
+
+#react-root>div>div>div:last-child>div>div>div>div:last-child>div:last-child {
+    border: none !important;
+}
+
+/* markdown */
+.ace_text-layer {
+    padding: 3%;
+}
+
+.ace_content {
+    background-color: var(--black) !important;
+}
+
+.ace_editor div, .ace_editor span {
+    font-family: var(--font-mono) !important;
+    font-weight: --font-weight-base;
+    color: var(--light-grey);
+}
+
+.ace_heading {
+    color: var(--white) !important;
+}
+
+.ace_variable {
+    color: var(--white) !important;
+}
+
+.ace_list {
+    color: var(--light-grey) !important;
+}
+
+.ace_string {
+    color: var(--primary) !important;
+}
+
+.ace_cursor {
+    border-left: var(--base-size-1) solid var(--primary) !important;
+}
+
+/* prevent cursor from blinking */
+/* https://discourse.joplinapp.org/t/share-your-css/1730/17 */
+.ace_cursor-layer:not(.ace_hidden-cursors) .ace_cursor {
+    opacity: 1 !important;
+}
+
+/* gui */
+.side-bar {
+    background-color: var(--darker-grey) !important;
+    opacity: 0.8;
+}
+
+.side-bar .folders {}
+
+.side-bar .folders .list-item, .side-bar div, .side-bar span {
+    color: var(--white) !important;
+    font-weight: var(--font-weight-base) !important;
+    font-size: var(--base-size-13) !important;
+    margin-bottom: var(--base-size-1);
+}
+
+.side-bar div div {
+    font-size: var(--base-size-13) !important;
+}
+
+.list-item div {
+    margin-left: auto !important;
+    padding-right: var(--base-size-13) !important;
+    opacity: 0.3 !important;
+}
+
+.synchronize-button {}
+
+.note-list {
+    background-color: var(--darker-grey);
+    padding: var(--base-size-8) 0;
+    opacity: 0.7;
+}
+
+.note-list input[type="checkbox"i] {
+    opacity: 0.5 !important;
+}
+
+.note-list div {
+    border-bottom: 0 !important;
+}
+
+.note-list input[type="checkbox"i] {
+    margin-right: 1em !important;
+}
+
+.note-list a.list-item span, .tags .list-item {
+    /* font-family: "IBM Plex Mono" !important; */
+    /* font-size: 12px !important; */
+    color: var(--light-grey) !important;
+}
+
+/* icons */
+.fa {
+    color: var(--grey) !important;
+    padding-right: var(--base-size-4);
+}
+
+#react-root>div {
+    background-color: var(--dark-grey) !important;
+}
+
+#react-root div div div:last-child div input {
+    margin: 0 !important;
+    margin-right: var(--base-size-18) !important;
+    height: var(--base-size-24) !important;
+    font-size: var(--base-size-18) !important;
+    font-family: var(--font-mono);
+    font-weight: var(--font-weight-light);
+    background-color: var(--darker-grey) !important
+}
+
+.editor-toolbar {
+    order: 2
+}
+
+.editor-toolbar .button {
+    height: var(--base-size-40)
+}
+
+.editor-toolbar .button i {
+    font-size: var(--base-size-13) !important;
+}
+
+.editor-toolbar .fa {
+    padding-right: 0;
+}
+
+.header {
+    border-bottom: var(--base-size-1) solid var(--dark-grey) !important;
+}
+
+.header .title {
+    color: var(--grey);
+}
+
+/* toggle sidebar */
+.header>*:nth-child(1) {
+    order: 1
+}
+
+/* toggle notebooks */
+.header>*:nth-child(2) {
+    order: 2
+}
+
+/* new note */
+.header>*:nth-child(3) {
+    order: 5
+}
+
+/* new todo */
+.header>*:nth-child(4) {
+    order: 6
+}
+
+/* new notebook */
+.header>*:nth-child(5) {
+    order: 4;
+    margin-left: var(--base-size-24);
+}
+
+/* layout */
+.header>*:nth-child(6) {
+    order: 3
+}
+
+/* layout */
+.header>*:nth-child(7) {
+    order: 7
+}
+
+/* search */
+.header>*:nth-child(8) {
+    margin-left: auto;
+    order: 8
+}
+
+.header>*:nth-child(7) input, .header>*:nth-child(8) input {
+    margin-right: var(--base-size-4) !important;
+    margin-left: auto !important;
+    width: var(--base-size-272);
+}
+
+.header>*:nth-child(7) a, .header>*:nth-child(8) a {
+    display: none
+}
+
+input {
+    border-radius: var(--base-size-4) !important;
+    border: 0px !important;
+    background-color: var(--dark-grey) !important;
+    border: var(--base-size-1) solid var(--darker-grey) !important;
+}
+
+input:focus {
+    outline: none;
+    border: var(--base-size-1) solid var(--primary) !important;
+}
+
+.header *:nth-child(7) a {
+    display: none;
+}
+
+.header .title {
+    display: none !important;
+}
+
+.folders i.fa.fa-minus-square, .folders i.fa.fa-plus-square {
+    padding-right: 3px !important;
+}
+
+.folders .list-item-container {
+    margin: 0 !important;
+}
+
+.folders a.list-item {
+    padding-left: 9px;
+    margin: 0 !important;
+}
+
+.side-bar>div:last-child div {
+    font-family: var(--font-mono) !important;
+    font-size: 11px !important;
+    padding: 2px;
+}
+
+.side-bar>div:last-child {
+    padding: var(--base-size-4) !important;
+    font-family: var(--font-mono) !important;
+    border-top: var(--base-size-1) solid var(--black);
+}
+
+.synchronize-button {
+    border: none !important;
+    background: var(--dark-grey);
+    border-radius: var(--base-size-4) !important;
+    padding: var(--base-size-13) !important;
+    color: var(--light-grey) !important;
+    text-transform: uppercase;
+    font-family: var(--font-mono) !important;
+    font-weight: var(--font-weight-bold) !important;
+    letter-spacing: 1px;
+}
