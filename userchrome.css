@@ -15,23 +15,37 @@
     --base-size-1: 1px;
     --base-size-4: 4px;
     --base-size-8: 8px;
-    --base-size-13: 13px;
+    --base-size-13: 14px; /* Notebook and icon size */
     --base-size-18: 18px; /* Note Title Size */
     --base-size-24: 24px;
     --base-size-32: 32px;
     --base-size-40: 40px;
     --base-size-272: 272px;
-    --font-sans: "IBM Plex Sans";
 
+/*
+    --font-sans: "IBM Plex Sans";
+    --font-sans: "Lucida Grande";
+*/
+    --font-sans: "Calibri";
 /*
     --font-mono: "IBM Plex Mono";
 */
     --font-mono: "Menlo";
 
     --font-weight-light: 200;
-    --font-weight-base: 300;
+    --font-weight-base: 400;
     --font-weight-bold: 500;
     --font-line-height: 1.1em;
+}
+
+* {
+    font-family: var(--font-sans) !important;
+    font-weight: var(--font-weight-base) !important;
+}
+
+.fa, .far, .fas {
+    font-weight: 900 !important;
+    font-family: "Font Awesome 5 Free" !important;
 }
 
 /*------ Notebook pane: use lines for notebook tree -------------------------*/
@@ -197,12 +211,14 @@ body {
 /* Adjust Note List Font Size - Blair Added */
 .note-list > div,
 .note-list > div > a 
- {
-    font-size: 0.9em !important;
+{
+    font-family: var(--font-sans) !important;
+    font-size: 0.95em !important;
 }
 
+
 /* icons */
-.fa {
+.fa, .far, .fas {
     color: var(--grey) !important;
     padding-right: var(--base-size-4);
 }
@@ -238,7 +254,7 @@ body {
     font-size: var(--base-size-13) !important;
 }
 
-.editor-toolbar .fa {
+.editor-toolbar .fa, .editor-toolbar .fas {
     padding-right: 0;
 }
 
