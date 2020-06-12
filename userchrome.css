@@ -213,6 +213,11 @@ body {
     color: var(--light-grey) !important;
 }
 
+/* Tags Size */
+.tags .list-item {
+    font-size: 1.1em !important;
+}
+
 /* Adjust Note List Font Size - Blair Added */
 .note-list > div,
 .note-list > div > a 
