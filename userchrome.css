@@ -15,7 +15,7 @@
     --base-size-1: 1px;
     --base-size-4: 4px;
     --base-size-8: 8px;
-    --base-size-13: 14px; /* Notebook and icon size */
+    --base-size-13: 15px; /* Notebook and icon size */
     --base-size-18: 18px; /* Note Title Size */
     --base-size-24: 24px;
     --base-size-32: 32px;
@@ -164,6 +164,11 @@ body {
     font-size: var(--base-size-13) !important;
 }
 
+/* making icons the same width so text aligns */
+.side-bar .fas:first-of-type {
+    width: var(--base-size-18)
+}
+
 /* Blair Added - Sidebar hover */
 /* .side-bar div[toggleblock="1"]:hover, */
 .side-bar .list-item-container:hover,
@@ -186,7 +191,7 @@ body {
 .note-list {
     background-color: var(--darker-grey);
     padding: var(--base-size-8) 0;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 
@@ -357,7 +362,7 @@ input:focus {
 
 
 .folders a.list-item {
-    padding-left: 9px;
+    padding-left: var(--base-size-8);
     margin: 0 !important;
     background-color: #1D2025 !important; /* Blair Added */
 }
