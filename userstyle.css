@@ -60,6 +60,7 @@ body {
 
 p, h1, h2, h3, h4, h5, h6, ul, table {
     margin-top: 0;
+    margin-bottom: var(--base-size-8);
 }
 
 h1, h2, h3, h4 {
@@ -71,7 +72,7 @@ h1, h2, h3, h4 {
 h1 {
     font-size: var(--base-size-32) !important;
     line-height: var(--font-line-height) !important;
-    margin-top: var(--base-size-40) !important;
+    margin-top: var(--base-size-24) !important;
     border-bottom: none !important;
 }
 
